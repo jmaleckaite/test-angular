@@ -1,29 +1,30 @@
 .table {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
     border-collapse: collapse;
+    border: none;
+    width: 100%;
 }
 
 .table th, .table td {
-    border: 0.5px solid gray;
+    border: none;
     padding: 5px;
 }
 
 .table tr:hover {
-    background-color: gray;
+    background-color: #d3d3d3;
 }
 
 .table tr:nth-child(even){
-    background-color: #f2f2f2;
+    background-color: #f0f0f0;
 }
 
 .table tr:nth-child(even):hover{
-    background-color: gray;
+    background-color: #d3d3d3;
 }
 
 .table th {
     text-align: center;
-    background-color: rgb(99, 156, 137);
+    background-color: #130018;
     color: white;
 }
 
@@ -34,9 +35,39 @@
     text-overflow: ellipsis;
 }
 
+.searchbar {
+    border-radius: 5px;
+    width: 25%;
+    padding: 10px;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+.previous-button, .next-button {
+    background-color: #130018;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px;
+}
 
-/* Responsiveness on mobile screen */
+.previous-button:disabled, .next-button:disabled, button[disabled] {
+    background-color: #d3d3d3;
+}
+
+.previous-button:hover:not([disabled]), .next-button:hover:not([disabled]) {
+    background-color: #65067c;
+    color: #d3d3d3;
+}
+
+.paging-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #130018;
+    margin: 5px 5px 5px 5px;
+}
+
+/* Responsive on mobile screen */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
     #content-id, #creation-date, #duration, #description, #status, #file-name, #publish-date, #update-date {
         display: none;

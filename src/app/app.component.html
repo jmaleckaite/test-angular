@@ -1,5 +1,5 @@
 <br/>
-<input type="text" [(ngModel)]="title" (input)="searchByTheTitle()" placeholder="Search by the title"/> 
+<input type="text" [(ngModel)]="title" (input)="searchByTheTitle()" placeholder="Search by the title" class="searchbar"/> 
 <br /><br />
 <table class="table">
   <thead>
@@ -33,6 +33,7 @@
 </table>
 <p class="paging">
   <button [disabled]="currentPage == 1" (click)="currentPage = currentPage - 1" class="previous-button">Previous</button>
-  <span>Page {{currentPage}} of {{ numberOfPages() }}</span>
+  <span class="paging-text">Page {{currentPage}} of {{ numberOfPages() }}</span>
   <button [disabled]="currentPage >= contents.length/pageSize" (click)="currentPage = currentPage + 1" class="next-button">Next</button>
 </p>
+<br/><br/><br/>
